@@ -64,7 +64,7 @@ public class EmployeeControllerTest {
     }
 
     @Test
-    void should_find_employee_by_page_and_page_sizeshould_find_employee_by_gender() throws Exception {
+    void should_find_employee_by_gender() throws Exception {
 
         Employee employee1 = new Employee(1,"小明1",21,"男",3000);
         Employee employee2 = new Employee(2,"小明2",21,"男",400);
@@ -95,6 +95,6 @@ public class EmployeeControllerTest {
         resultActions.andExpect(status().isOk())
                 .andExpect(jsonPath("$.[0].name",is("小明3")));
     }
-    
+
 
 }
